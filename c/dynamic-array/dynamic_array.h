@@ -8,8 +8,8 @@ typedef struct dynamic_array {
     unsigned max_index;
 } ARRAY;
 
-ARRAY alloc_array(unsigned int size);
-void  realloc_array(ARRAY *arr, unsigned int size);
+ARRAY alloc_array(unsigned long size);
+void  realloc_array(ARRAY *arr, unsigned long size);
 void  free_array(ARRAY arr);
 bool  is_empty(ARRAY arr);
 bool  is_full(ARRAY arr);

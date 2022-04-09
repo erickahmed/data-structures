@@ -14,8 +14,8 @@
 #define TOT_ELEM 999    // elements to store dynamically
 #define BIG_O
 
-static unsigned int len = 0;
-static unsigned int cap = INIT_SIZE;
+static unsigned long len = 0;
+static unsigned long cap = INIT_SIZE;
 
 int main(int argc,  char** argv)
 {
@@ -43,6 +43,10 @@ int main(int argc,  char** argv)
     append_array(&dyn_arr, 2);
         debug_array(&dyn_arr);
         pop_array(&dyn_arr);
+        debug_array(&dyn_arr);
+                pop_array(&dyn_arr);
+        debug_array(&dyn_arr);
+                pop_array(&dyn_arr);
         debug_array(&dyn_arr);
     append_array(&dyn_arr, 0);
         debug_array(&dyn_arr);

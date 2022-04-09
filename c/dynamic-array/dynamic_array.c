@@ -5,11 +5,11 @@
 
 unsigned int init_size = 1;     // array initial size
 
-ARRAY alloc_array (unsigned int size) {
+ARRAY alloc_array (unsigned long size) {
     ARRAY arr;
 
     arr.size = init_size;
-    arr.items = malloc(arr.size*sizeof(unsigned int));
+    arr.items = malloc(arr.size*sizeof(unsigned long));
     arr.max_index = 0;
 
     if(sizeof(arr.size) == 0) {
@@ -19,9 +19,9 @@ ARRAY alloc_array (unsigned int size) {
     return arr;
 }
 
-void realloc_array(ARRAY *arr, unsigned int size) {
+void realloc_array(ARRAY *arr, unsigned long size) {
     if(arr->max_index >= arr->size) arr->size = 2*arr->max_index;
-    else if(arr->max_index < arr->size/2) arr->size = arr->max_index/2;
+    else if(arr->max_index <= arr->size/2 && arr->size>2) arr->size = arr->size/2;
 
     arr->items = realloc(arr->items, size);
     size = sizeof(arr);
