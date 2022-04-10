@@ -3,13 +3,13 @@
 #include <stdbool.h>
 #include "dynamic_array.h"
 
-unsigned int init_size = 1;     // array initial size
+#define INIT_SIZE 1     // array initial size
 
-ARRAY alloc_array (unsigned long size) {
+ARRAY alloc_array (unsigned int size) {
     ARRAY arr;
 
-    arr.size = init_size;
-    arr.items = malloc(arr.size*sizeof(unsigned long));
+    arr.size = INIT_SIZE;
+    arr.items = malloc(arr.size*sizeof(unsigned int));
     arr.max_index = 0;
 
     if(sizeof(arr.size) == 0) {
@@ -19,11 +19,11 @@ ARRAY alloc_array (unsigned long size) {
     return arr;
 }
 
-void realloc_array(ARRAY *arr, unsigned long size) {
+void realloc_array(ARRAY *arr, unsigned int size) {
     if(arr->max_index >= arr->size) arr->size = 2*arr->max_index;
     else if(arr->max_index <= arr->size/2 && arr->size>2) arr->size = arr->size/2;
 
-    arr->items = realloc(arr->items, size);
+    arr->items = realloc(arr->items, size*(sizeof(int)));
     size = sizeof(arr);
     //TODO: garbage collection
 }
@@ -54,16 +54,24 @@ void pop_array(ARRAY *arr) {
     realloc_array(arr, arr->size);
 }
 
-/*void insert_array(ARRAY *arr, int item, int index) {
+void insert_array(ARRAY *arr, int index, int item) {
+    realloc_array(arr, arr->size+1);
+    arr->max_index++;
 
-    realloc_array(arr, arr->size);
+    for(int i = arr->max_index; i >= index; --i) {
+        arr->items[i+1] = arr->items[i];
+    }
 
+    arr->items[index] = item;
+}
 
-}*/
+void modify_array(ARRAY *arr, int index, int item) {
+    arr->items[index] = item;
+}
 
 void debug_array(ARRAY *arr) {
-    printf("Last Index: %d; ", arr->max_index);
-    printf("Size: %d; ", arr->size);
+    printf("Last Index: %d; ", (arr->max_index)-1);
+    printf("Bytes: %d; ", arr->size);
 
     printf("Array: [");
     printf("%d", arr->items[0]);
