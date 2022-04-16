@@ -1,2 +1,2 @@
-# data-structures
- A comprehensive list of useful data structures implemented in different languages
+# Data Structures
+ A growing list of useful data structures implemented in different languages.
