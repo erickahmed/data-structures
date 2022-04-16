@@ -1,9 +1,8 @@
 /*
     DYNAMIC ARRAY:
-    A dynamically allocated array that doubles its size every time there's not
+    A dynamically allocated array list that doubles its size every time there's not
     enough space in the allocated memory: it creates a new array double the dimensions of
     the old array.
-    Modify INIT_SIZE or ELEM to change the array dimensions and the final allocated memory
 */
 
 #include <stdio.h>
