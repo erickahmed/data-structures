@@ -1,5 +1,5 @@
-#ifndef DOUBLY_LIKED_LIST_H
-#define DOUBLY_LIKED_LIST_H
+#ifndef DOUBLY_LINKED_LIST_H
+#define DOUBLY_LINKED_LIST_H
 
 typedef struct node {
     int elem;
