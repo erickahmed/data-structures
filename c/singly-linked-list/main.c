@@ -21,7 +21,7 @@ int main(int argc,  char** argv)
     delete_node(sLink);
     debug_list(sLink);
 
-    tail_delete(sLink;)
+    tail_delete(sLink);
     debug_list(sLink);
     insert_tail_node(sLink, -2);
     debug_list(sLink);
