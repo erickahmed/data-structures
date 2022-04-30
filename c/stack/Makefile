@@ -2,10 +2,10 @@ C := gcc
 OBJ_FL := -o
 BLD_FL := -c
 SRC := main.c
-OBJ := lifo-stack.o
-DEPS := lifo-stack.c lifo-stack.h
+OBJ := stack.o
+DEPS := stack.c stack.h
 
-OUT := lifo-stack.exe
+OUT := stack.exe
 
 .PHONY: all clean
 

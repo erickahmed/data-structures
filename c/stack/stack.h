@@ -1,5 +1,5 @@
-#ifndef LIFOSTACK_H
-#define LIFOSTACK_H
+#ifndef STACK_H
+#define STACK_H
 
 typedef struct stack {
     unsigned int size;

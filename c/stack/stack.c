@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lifo-stack.h"
+#include "stack.h"
 
 stack init(unsigned int n){
     stack tmp = {0, 0, NULL};

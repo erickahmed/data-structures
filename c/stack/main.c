@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lifo-stack.h"
+#include "stack.h"
 
 unsigned int n = 8;
 
