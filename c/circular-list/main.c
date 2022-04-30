@@ -4,7 +4,7 @@
 
 int main(int argc,  char** argv)
 {
-    NODE *sLink = alloc_node(69);
+    node*sLink = alloc_node(69);
     debug_list(sLink);
 
     insert_node(sLink, 4);
