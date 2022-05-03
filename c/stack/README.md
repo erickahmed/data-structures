@@ -5,7 +5,7 @@ A stack supports essentially only two operations: push and pop.
 
 ### Pro's
 
-It is a very versatile DS, even if it has mainly only two functions. Also you can use it in LIFO or FIFO configurations.
+It is a very versatile DS, and having only two main methods to add or remove elements it is very easy compared to other DSs
 
 ### Cons
 
