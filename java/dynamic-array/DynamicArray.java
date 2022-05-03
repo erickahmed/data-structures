@@ -84,11 +84,16 @@ public class DynamicArray implements Iterable<Integer> {
     }
 
     public void Debug() {
-        if (len == 0) System.out.println("[]");
+        if (len == 0) {
+            System.out.print("[]");
+            System.out.print(" Capacity: 0" );
+            System.out.println();
+        }
         else {
             System.out.print("[");
             for (int i = 0; i < len - 1; i++) System.out.print(arr[i] + ", ");
-            System.out.println(arr[len - 1] + "]");
+            System.out.print(arr[len - 1] + "]");
+            System.out.print(" Capacity: " + cap);
             System.out.println();
         }
     }

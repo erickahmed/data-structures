@@ -4,14 +4,19 @@ public class Test {
         testArray.ArrayInit(2);
 
         testArray.IsEmpty();
+        testArray.Debug();
 
         testArray.Insert(3);
-        testArray.Insert(7);
-        testArray.Insert(6);
-        testArray.Insert(-2);
-
-        testArray.BinarySearch(3);
-
         testArray.Debug();
+        testArray.Insert(7);
+        testArray.Debug();
+        testArray.Insert(6);
+        testArray.Debug();
+        testArray.Insert(-2);
+        testArray.Debug();
+
+        System.out.println(testArray.BinarySearch(3));
+
+
     }
 }
