@@ -34,10 +34,10 @@ public class DynamicArray implements Iterable<Integer> {
 
     // Insert element at first free space and eventually change array dimension dynamically
     public void Insert(int elem) {
-        if (len++ >= cap) {
+        if (len + 1 >= cap) {
             if (cap == 0) cap = 1;
             else cap *= 2;
-        } else if (len++ <= (cap/2)) cap /= 2;
+        } else if (len + 1 <= (cap/2)) cap /= 2;
 
         arr = java.util.Arrays.copyOf(arr, cap);
         arr[len++] = elem;
@@ -83,12 +83,13 @@ public class DynamicArray implements Iterable<Integer> {
         java.util.Arrays.sort(arr, 0, len);
     }
 
-    public String Debug() {
-        if (len == 0) return "[]";
+    public void Debug() {
+        if (len == 0) System.out.println("[]");
         else {
-            StringBuilder sb = new StringBuilder(len).append("[");
-            for (int i = 0; i < len - 1; i++) sb.append(arr[i] + ", ");
-            return sb.append(arr[len - 1] + "]").toString();
+            System.out.print("[");
+            for (int i = 0; i < len - 1; i++) System.out.print(arr[i] + ", ");
+            System.out.println(arr[len - 1] + "]");
+            System.out.println();
         }
     }
 
