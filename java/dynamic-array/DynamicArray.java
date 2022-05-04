@@ -17,7 +17,7 @@ public class DynamicArray implements Iterable<Integer> {
 
     // Given a static array make it dynamic
     public void ArrayInit(int[] array) {
-        if(array.equals(null)) throw new IllegalArgumentException("Array cannot be null!");
+        if(arr.equals(null)) throw new IllegalArgumentException("Array cannot be null!");
         arr = java.util.Arrays.copyOf(array, array.length);
         cap = len = array.length;
     }

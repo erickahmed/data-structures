@@ -16,7 +16,5 @@ public class Test {
         testArray.Debug();
 
         System.out.println(testArray.BinarySearch(3));
-
-
     }
 }
