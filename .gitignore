@@ -1,5 +1,12 @@
 #Folders
 .vscode
+.idea
+out
+.history
+
+#Java
+*.class
 
 # Binary
 *.exe
+*.out
