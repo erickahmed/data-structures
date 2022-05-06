@@ -47,7 +47,7 @@ void append_array(ARRAY *arr, int item) {
     arr->max_index++;
 }
 
-void pop_array(ARRAY *arr) {
+void remove_last_elem_array(ARRAY *arr) {
     arr->items[arr->max_index] = 0;
     arr->max_index--;
 

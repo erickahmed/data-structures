@@ -44,7 +44,7 @@ int main(int argc,  char** argv)
     debug_array(&dyn_arr);
 
     // delete the last element
-    pop_array(&dyn_arr);
+    remove_last_elem_array(&dyn_arr);
     debug_array(&dyn_arr);
 
     // check if array is full
