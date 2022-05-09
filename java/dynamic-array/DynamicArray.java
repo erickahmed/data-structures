@@ -50,6 +50,12 @@ public class DynamicArray implements Iterable<Integer> {
         --cap;
     }
 
+    public void Clear(int[] array) {
+        for (int i = cap; i > 0; i--) {
+            RemoveAtIndex(i);
+        }
+    }
+
     // Remove a specific element at any index
     public boolean RemoveElem(int elem) {
         for (int i = 0; i < len; i++) {
