@@ -25,7 +25,6 @@ void realloc_array(ARRAY *arr, unsigned int size) {
 
     arr->items = realloc(arr->items, size*(sizeof(int)));
     size = sizeof(arr);
-    //TODO: garbage collection
 }
 
 void free_array(ARRAY arr) {
