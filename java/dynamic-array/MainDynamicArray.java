@@ -1,4 +1,4 @@
-public class Test {
+public class MainDynamicArray {
     public static void main(String[] args) {
         DynamicArray testArray = new DynamicArray();
         testArray.ArrayInit(2);

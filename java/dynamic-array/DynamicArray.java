@@ -97,10 +97,12 @@ public class DynamicArray implements Iterable<Integer> {
         }
         else {
             System.out.print("[");
-            for (int i = 0; i < len - 1; i++) System.out.print(arr[i] + ", ");
-            System.out.print(arr[len - 1] + "]");
-            System.out.print(" Capacity: " + cap);
-            System.out.println();
+            for (int i = 0; i < len - 1; i++) {
+                System.out.print(arr[i] + ", ");
+                System.out.print(arr[len - 1] + "]");
+                System.out.print(" Capacity: " + cap);
+                System.out.println();
+            }
         }
     }
 
