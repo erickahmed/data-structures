@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "singly-linked-list.h"
 
-#define FIRST_ELEM  9
+#define INIT_SIZE 8
 
-int main(int argc,  char** argv)
+int main(int argc, char** argv)
 {
-    NODE *sLink = alloc_node(FIRST_ELEM);
+    NODE *sLink = malloc(INIT_SIZE);
     debug_list(sLink);
 
     insert_node(sLink, 4);

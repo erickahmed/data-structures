@@ -16,7 +16,7 @@ static int insert_head_node(struct node *L, int elem);
 static int insert_tail_node(struct node *L, int elem);
 static int index_insert_node(struct node *L, int elem, unsigned int index);
 static int is_empty(list *L);
-static int is_inlist(list *L, int elem);
+static int is_in_list(list *L, int elem);
 static int head_delete(list *L);
 static int tail_delete(list *L);
 void delete_list(list *L);

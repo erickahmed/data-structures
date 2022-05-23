@@ -45,7 +45,7 @@ static int is_empty(list *L) {
     return (L == NULL) || (*L == NULL);
 }
 
-static int is_inlist(list *L, int elem) {
+static int is_in_list(list *L, int elem) {
     if(is_empty(L)) return 0;
     else {
         struct node *tmp = *L;
