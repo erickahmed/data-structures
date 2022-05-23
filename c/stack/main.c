@@ -12,5 +12,5 @@ int main(int argc,  char** argv)
     push(&lifo, 6);
     push(&lifo, 9);
 
-    pop(&lifo, 3);
+    pop(&lifo);
 }

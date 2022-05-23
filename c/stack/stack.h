@@ -12,7 +12,8 @@ void clear(stack *S);
 int is_empty(stack *S);
 int is_full(stack *S);
 int push(stack *S, int elem);
-int pop(stack *S, int *elem);
+int pop(stack *S);
 int top(stack *S, int *elem);
+void debug_stack(stack *S);
 
 #endif

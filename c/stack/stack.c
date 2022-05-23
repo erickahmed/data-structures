@@ -35,10 +35,13 @@ int push(stack *S, int *elem) {
     }
 }
 
-int pop(stack *S, int *elem) {
-    if(is_empty(S) || elem == NULL) return 1;
+int pop(stack *S) {
+    if(is_empty(S) || S->last == NULL) return 1;
     else {
-        *elem = S->data[S->last-- -1];
+        int tmp = S->last--;
+        free(S->last);
+        S->last = S->data[tmp - 1];
+
         return 0;
     }
 }
@@ -49,4 +52,21 @@ int top(stack *S, int *elem) {
         *elem = S->data[S->last -1];
         return 0;
     }
+}
+
+void debug_stack(stack *S) {
+    printf("Stack: [");
+    int *dat = *S->data - S->size;
+
+    if(*dat == NULL) {
+        printf("[ %d \n", dat);
+    } else {
+        printf("[ %d ", dat);
+        *dat++;
+    }
+    while(*dat != NULL) {
+        printf("-> %d ", *dat);
+        *dat++;
+    }
+    printf("]\n");
 }
