@@ -22,7 +22,7 @@ static struct node *search_node(struct node *L, unsigned int i) {
 static int insert_node(struct node *L, int elem) {
     if(L == NULL) return 1;
     else {
-        struct node *tmp = node_alloc(elem);
+        struct node *tmp = malloc(elem);
 
         if(tmp != NULL) {
             tmp->next = L->next;
@@ -51,7 +51,7 @@ static int is_empty(list *L) {
     return (L == NULL) || (*L == NULL);
 }
 
-static int is_inlist(list *L, int elem) {
+static int is_in_list(list *L, int elem) {
     if(is_empty(L)) return 0;
     else {
         struct node *tmp = *L;

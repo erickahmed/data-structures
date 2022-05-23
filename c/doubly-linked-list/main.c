@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "singly-linked-list.h"
+#include "c/singly-linked-list/singly-linked-list.h"
 
 int main(int argc,  char** argv)
 {
