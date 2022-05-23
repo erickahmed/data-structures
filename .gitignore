@@ -10,3 +10,8 @@ out
 # Binary
 *.exe
 *.out
+newrelic_agent.log
+
+#Database
+*.pdb
+*.iml
