@@ -51,7 +51,24 @@ int dequeue(queue *Q, int *elem) {
 int front(queue *Q, int *elem) {
     if(is_empty(Q) || elem == NULL) return 1;
     else {
-        *elem = Q->data[Q->head];
+        *elem = *Q->data[Q->head];
         return 0;
     }
+}
+
+void debug_queue(queue *S) {
+    printf("Queue: [");
+    int *dat = *S->data - S->size;
+
+    if(*dat == NULL) {
+        printf("[ %d \n", dat);
+    } else {
+        printf("[ %d ", dat);
+        *dat++;
+    }
+    while(*dat != NULL) {
+        printf("-> %d ", *dat);
+        *dat++;
+    }
+    printf("]\n");
 }

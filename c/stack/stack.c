@@ -17,7 +17,6 @@ void clear(stack *S) {
         free(S->data);
         S->data = NULL;
         S->last = 0;
-        S->size = 0;
     }
 }
 
@@ -30,7 +29,10 @@ int is_full(stack *S) {
 }
 
 int push(stack *S, int elem) {
-    if(is_full(S)) return 1;
+    if(is_full(S)) {
+    print("Stack overflow");
+    return 1;
+    }
     else {
         S->data[S->last++] = elem;
         return 0;
@@ -38,11 +40,15 @@ int push(stack *S, int elem) {
 }
 
 int pop(stack *S) {
-    if(is_empty(S) || &S->last == NULL) return 1;
+    if(is_empty(S) || &S->last == NULL) {
+        print("Stack underflow")
+        return 1;
+    }
     else {
-        int tmp = S->last--;
-        //free(&S->last);
-        S->last = S->data[tmp - 1];
+        int elements = S->last--;
+        //free(S->last);  FIXME: having issues implementing the free method.
+        //                       The current implementation is not optimal
+        S->data[--elements] = 0;
 
         return 0;
     }
@@ -62,9 +68,9 @@ void debug_stack(stack *S) {
     int i = 0;
 
     if(&S->data[i] == NULL) {
-        printf("[ %d \n", S->data[i]);
+        printf(" %d \n", S->data[i]);
     } else {
-        printf("[ %d ", S->data[i]);
+        printf(" %d ", S->data[i]);
         i++;
     }
     while(i < S->size) {

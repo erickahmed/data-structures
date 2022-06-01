@@ -15,5 +15,6 @@ int is_full(queue *Q);
 int enqueue(queue *Q, int elem);
 int dequeue(queue *Q, int *elem);
 int front(queue *Q, int *elem);
+void debug_queue(queue *S);
 
 #endif
